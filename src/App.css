@@ -1,0 +1,98 @@
+.BasPage {
+  font-size: 22px;
+  line-height: 15px;
+  text-shadow: -1px -1px #fb6, 1px 1px #d60, -3px 0 4px #000;
+  font-family: "Segoe print", Arial, Helvetica, sans-serif;
+  color: #ff9933;
+  padding: 12px;
+  font-weight: lighter;
+  -moz-box-shadow: 2px 2px 6px #888;
+  -webkit-box-shadow: 2px 2px 6px #888;
+  box-shadow: 2px 2px 6px #888;
+  text-align: center;
+  display: flexbox;
+}
+body {
+  margin: 0;
+  background: -moz-linear-gradient(
+    45deg,
+    #291bce 0%,
+    #d756e3 78%,
+    #3b21c5 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #291bce 0%,
+    #d756e3 78%,
+    #3b21c5 100%
+  );
+  background: linear-gradient(45deg, #291bce 0%, #d756e3 78%, #3b21c5 100%);
+  min-height: 100vh;
+} /*min-height : pour probleme de body no 100% de la vue*/
+
+.HautPage {
+  text-align: center;
+  border: 26px ridge #7c2dba;
+  box-shadow: inset -1px 0px 44px 12px #2a1dc9;
+  font-size: 22px;
+  line-height: 15px;
+  text-shadow: -1px -1px #fb6, 1px 1px #d60, -3px 0 4px #000;
+  font-family: "Segoe print", Arial, Helvetica, sans-serif;
+  color: #ff9933;
+}
+
+.bonjour {
+  max-width: 30em; /* largeur de la fenêtre */
+  margin: 1em auto 2em;
+  border: 10px solid #f0f0ff;
+  overflow: hidden; /* masque tout ce qui dépasse */
+  box-shadow: 0 0.25em 0.5em #ccc, inset 0 0 1em 0.25em #ccc;
+}
+.bonjour > :first-child {
+  display: inline-block; /* modèle de boîte en ligne */
+  padding-right: 2em; /* un peu d'espace pour la transition */
+  padding-left: 100%; /* placement à droite du conteneur */
+  white-space: nowrap; /* pas de passage à la ligne */
+  animation: defilement-bonjour 15s infinite linear;
+}
+@keyframes defilement-bonjour {
+  0% {
+    transform: translate3d(0, 0, 0); /* position initiale à droite */
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0); /* position finale à gauche */
+  }
+}
+input[type="submit"] {
+  height: 35px;
+  width: 210px;
+  background-image: url(img/submitPanier.JPG);
+  background-repeat: no-repeat;
+  color: red;
+  font-size: 2rem;
+  border: double;
+  cursor: pointer;
+}
+ion-icon {
+  font-size: 24px;
+  color: blue;
+  --ionicon-stroke-width: 16px;
+  cursor: pointer;
+}
+
+.Cart {
+  display: flex;
+  width: 100%;
+  padding: 10px 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 1px solid rgba(66, 39, 15, 0.938);
+  box-shadow: 3px -3px 10px 1px rgba(39, 39, 39, 0.97);
+}
+.prix_total {
+  margin-top: 30px;
+}
+.value_prix_total {
+  margin-top: 30px;
+}
